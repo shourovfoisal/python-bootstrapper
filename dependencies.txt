@@ -1,3 +1,2 @@
-dependency_name==version
-dependency_name==version
-dependency_name==version
+pandas==2.3.0
+python-dotenv==0.19.2

@@ -2,8 +2,18 @@
 
 **To run:**
 
-1. Download the `main.sh` file and place in the project directory.
-2. Make the file executable by running the command 'chmod +x main.sh'.
-2. Create a `dependencies.txt` at the same level as the `main.sh` and put your dependencies there. (There is a sample in this repo)
-3. Edit the `main.sh` file and append your code in the 'Your Code' section
-4. Run the `main.sh` file. A venv will be created with the desired dependencies, and your code will be executed right after it.
+1. Create a shell file at the root of your project. For example `main.sh`.
+2. Make it executable using
+```shell
+chmod +x main.sh
+```
+3. Add a `dependencies.txt` file at the same level of the `main.sh` file. Write your dependencies in it. A sample is available in this repository.
+4. Add the following line to the beginning of the shell file
+```shell
+source <(curl -fsSL https://raw.githubusercontent.com/shourovfoisal/python-bootstrapper/refs/heads/main/main.sh)
+```
+5. After the previous line, write your code that executes your python file. For example:
+```shell
+python3 script.py
+```
+6. A venv will be created with the desired dependencies, and your code will be executed right after it.

@@ -12,8 +12,9 @@ rm -f "$TEMP_FILE"  # Delete after use
 
 # Activate the VENV
 if [ -d "venv" ]; then
-  echo "Activating the Python Virtual Environment."
+  echo "Activating the Python Virtual Environment"
   source venv/bin/activate
+  echo "Virtual Environment Activated\nRunning the Program"
 else
   echo "Could not find the VENV Directory."
   exit 1

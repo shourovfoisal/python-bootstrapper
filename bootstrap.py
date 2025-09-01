@@ -9,10 +9,10 @@ DEPENDENCIES_FILE = BASE_DIR / "dependencies.txt"
 
 def create_venv():
   if not VENV_DIR.exists():
-    print("Creating virtual environment")
+    print("Creating Virtual Environment")
     subprocess.check_call([sys.executable, "-m", "venv", str(VENV_DIR)])
   else:
-    print("Virtual environment already exists")
+    print("Virtual Environment Already Exists")
 
 def get_pip_executable():
   pip_executable_name = "pip.exe" if os.name == "nt" else "pip"
@@ -20,7 +20,7 @@ def get_pip_executable():
 
 def install_dependencies():
   if DEPENDENCIES_FILE.exists():
-    print("Installing dependencies")
+    print("Installing Dependencies")
     subprocess.check_call([str(get_pip_executable()), "install", "-r", str(DEPENDENCIES_FILE)])
 
 def main():

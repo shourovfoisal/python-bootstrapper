@@ -2,7 +2,7 @@
 set -e
 
 # Bootstrapping Code
-BOOTSTRAP_FILE_URL=""
+BOOTSTRAP_FILE_URL="https://raw.githubusercontent.com/shourovfoisal/python-bootstrapper/refs/heads/main/bootstrap.py"
 TEMP_FILE="$(mktemp /tmp/bootstrap.XXXXXX.py)"
 echo "Installing Dependencies..."
 curl -sSL "$BOOTSTRAP_FILE_URL" -o "$TEMP_FILE"

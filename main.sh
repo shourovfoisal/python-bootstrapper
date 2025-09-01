@@ -6,7 +6,6 @@ BOOTSTRAP_FILE_URL="https://raw.githubusercontent.com/shourovfoisal/python-boots
 TEMP_FILE="$(mktemp /tmp/bootstrap.XXXXXX.py)"
 curl -sSL "$BOOTSTRAP_FILE_URL" -o "$TEMP_FILE"
 python3 "$TEMP_FILE"
-echo "Running the Script..."
 rm -f "$TEMP_FILE"  # Delete after use
 
 # Activate the VENV
